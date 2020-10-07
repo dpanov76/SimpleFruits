@@ -1,0 +1,5 @@
+<div class="row">
+  <div class="col-sm" *ngFor="let fruit of (fruitsState | async).fruits">
+    <app-fruit [fruit]="fruit"></app-fruit>
+  </div>
+</div>

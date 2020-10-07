@@ -1,0 +1,8 @@
+<div class="sort" *ngIf="order === 'price'">
+  <span>Sort by price</span>
+  <button class="btn btn-link clickable last violet" (click)="onSortChange('alphabetic')">Sort A-Z</button>
+</div>
+<div class="sort" *ngIf="order === 'alphabetic'">
+  <button class="btn btn-link clickable violet" (click)="onSortChange('price')">Sort by price</button>
+  <span>Sort A-Z</span>
+</div>

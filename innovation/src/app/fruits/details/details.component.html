@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-sm mb-2">
+    <a routerLink="" class="violet">< back to fruit</a>
+  </div>
+</div>
+<div *ngIf="fruit" class="row">
+
+  <div class="col-sm-4">
+    <div class="position-relative fruit">
+      <div class="float-right basket">
+        <img class="card-img-top" src="./assets/{{ fruit.img }}" alt="{{ fruit.name }}">
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-8">
+      <h1>{{fruit.name}}</h1>
+      <p class="price violet">£{{ fruit.price }}</p>
+      <button (click)="onAddToBasket(fruit.price)" class="btn basket" role="button" data-message="Buy now button">
+        <svg class="Icon shopping-card">
+          <use href="#Capa_1" />
+        </svg>
+        Buy now
+      </button>
+      <p class="card-text">{{ fruit.description }}</p>
+  </div>
+
+</div>
+

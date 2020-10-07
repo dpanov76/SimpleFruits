@@ -1,0 +1,19 @@
+<div class="card border-light mb-3">
+  <div class="position-relative fruit">
+    <a (click)="onFruitSelect(fruit)" routerLink="" class="no-link" role="button" data-message="Add the product to your basket">
+      <img class="card-img-top" src="./assets/{{ fruit.img }}" alt="{{ fruit.name }}">
+    </a>
+  </div>
+  <div class="card-body">
+    <a (click)="onFruitSelect(fruit)" routerLink="" class="no-link" role="button" data-message="Navigate to product page">
+      <h5 class="card-title">{{ fruit.name }}</h5>
+    </a>
+    <p class="card-text">{{ truncateString(fruit.description) }}</p>
+    <p class="price violet">£{{ fruit.price }}</p>
+    <a (click)="onAddToBasket(fruit.price)" routerLink="" class="float-right basket" role="button" data-message="Add the product to your basket">
+      <svg class="Icon shopping-card">
+        <use href="#Capa_1" />
+      </svg>
+    </a>
+  </div>
+</div>
